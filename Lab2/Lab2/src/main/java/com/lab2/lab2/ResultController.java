@@ -48,7 +48,7 @@ public class ResultController extends HttpServlet {
         {
             for(int i =0; i<word.length(); i++)
             {
-                this._permutationService.initial_size = number;
+                this._permutationService.initial_size = i;
                 _permutationService.GetPermutations(word, "",true, permutatedWords);
             }
         }
