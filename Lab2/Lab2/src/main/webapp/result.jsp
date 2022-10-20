@@ -8,9 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Result Screen</title>
 </head>
 <body>
-
+<h1>Welcome ${user.name}!</h1>
+<h3>Your input: ${user.initialWord}</h3>
+<h3>The output permutations:
+<br> ${user.permutatedWords.toString()}
+</h3>
 </body>
 </html>

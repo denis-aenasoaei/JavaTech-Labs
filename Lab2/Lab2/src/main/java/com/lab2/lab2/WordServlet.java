@@ -50,18 +50,19 @@ public class WordServlet extends HttpServlet {
         response.setContentType("text/html");
         StringBuilder sb = new StringBuilder();
         int number;
-        String word = request.getParameter("word");try {
+        String word = request.getParameter("word");
+        try {
             number = Integer.parseInt(request.getParameter("number"));
         } catch (NumberFormatException e) {
             number = 0;
         }
         initial_size = number;
-        sb.append("<ul>");
+        sb.append("<ol>");
         for(char letter : word.toCharArray())
         {
             sb.append("<li>").append(letter).append("</li>");
         }
-        sb.append("</ul>");
+        sb.append("</ol>");
         sb.append("<h2> All sequences</h2><br>");
         if(number == 0)
         {
